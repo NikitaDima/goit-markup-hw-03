@@ -12,6 +12,7 @@
     --title-text-color: #FFFFFF;
     --desc-text-color: #757575;
     --accent-color: #2196F3;
+    --section-content: 94px;
 }
 
 
@@ -29,25 +30,47 @@ a {
 ul {
     list-style-type: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Клас контейнер */
 .conteiner {
+    border: 1px solid tomato;
     width: 100%;
+    height: auto;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
 }
+/* Клас секшен */
+.section {
+    padding: var(--section-content) 0;
+}
 
-
+.main-working {
+    padding-bottom: var(--section-content);
+}
 
 .site-nav .link.current {
     color: var(--accent-color);
 }
 
-/* Стилізація шапки */
-/* .header {
-    /* border: 10px solid tomato; */
-
 /* Стиль логотипу */
+
 .logo {
+  
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -61,6 +84,7 @@ ul {
 }
 
 /* Стилізація навігації сайту */
+
 .site-nav .link {
     font-weight: 500;
     font-size: 14px;
@@ -81,6 +105,7 @@ ul {
 
 /* Стилізація контактів  */
 .contacts {
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.142;
@@ -88,6 +113,7 @@ ul {
 }
 
 .contacts .link {
+
     color: var(--desc-text-color)
 }
 
@@ -100,21 +126,33 @@ ul {
 }
 
 /* Стилізація героя головного контенту */
+
+.conteiner-hero {
+    padding: 200px 0;
+}
 .main-hero {
     background-color: #2F303A;
+           
 }
 
 .title-hero {
+    margin-bottom: 30px;
+        
     font-weight: 900;
     font-size: 44px;
     line-height: 1.363;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    text-align: center;
     color: var(--title-text-color)
 }
 
+
 .botton-hero {
-    font-family: 'Roboto';
+    margin: 0 auto;
+    padding: 0;
+     
+    font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
@@ -122,6 +160,12 @@ ul {
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--title-text-color);
 }
 
 .botton-hero:hover {
@@ -132,7 +176,7 @@ ul {
     background: #188CE8;
 }
 
-.text-main {
+/* .text-main {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -141,7 +185,7 @@ ul {
     text-align: center;
     letter-spacing: 0.06em;
     color: var(--title-text-color);
-}
+} */
 
 /* Стилізація секції "Наші переваги" */
 .visually-hidden {
@@ -157,7 +201,23 @@ ul {
     margin: -1px;
 }
 
-.list-benefits .subject-benefits {
+.list-benefits {
+    padding: 0;
+    margin: 0;
+    margin-right: -30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.list-benefits > .item {
+    flex-basis: calc(100%/4 - 30px);
+    margin-right: 30px;
+}
+.subject {
+    margin-bottom: 10px;
+}
+
+.list-benefits .subject {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.142;
@@ -165,7 +225,7 @@ ul {
     text-transform: uppercase;
 }
 
-.list-benefits .text-benefits {
+.list-benefits .text {
     font-size: 14px;
     line-height: 1.714;
     letter-spacing: 0.03em;
@@ -183,7 +243,7 @@ ul {
 /* Секція "Наша команда" */
 .main-team {
     background: #F5F4FA;
-}
+    }
 
 .title-team {
     font-weight: 700;
