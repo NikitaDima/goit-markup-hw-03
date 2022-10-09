@@ -47,7 +47,6 @@ img {
 }
 /* Клас контейнер */
 .conteiner {
-    border: 1px solid tomato;
     width: 100%;
     height: auto;
     max-width: 1200px;
@@ -65,6 +64,14 @@ img {
 
 .site-nav .link.current {
     color: var(--accent-color);
+}
+
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.filter-portfolio {
+    padding: var(--section-content) 0;
 }
 
 /* Стиль логотипу */
@@ -89,7 +96,6 @@ img {
 
     padding: 0;
 }
-
 
 .logo {
   
@@ -301,7 +307,7 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px 
     rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-}
+    }
 
 .conteiner-team {
     margin: 30px auto;
@@ -316,7 +322,22 @@ img {
 }
 
 /* Стилі кнопок фільтра */
-.filter-portfolio .btn {
+/* .botton-filter {
+} */
+.items-botton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 6px 22px;
+
     border: 0px;
     background: #F5F4FA;
     border-radius: 4px;
@@ -328,32 +349,47 @@ img {
     letter-spacing: 0.03em;
 }
 
-.filter-portfolio .btn:hover {
-    background: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    color: var(--title-text-color)
-}
-
-.filter-portfolio .btn:focus {
+.btn:hover,
+.btn:focus {
     background: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--title-text-color)
 }
 
 /* Стилі контенту портфоліо */
-.filter-portfolio .item-portfolio {
-    box-sizing: border-box;
+.list-portfolio {
+    padding: 0;
+    margin: 0;
+    margin-right: -30px;
+
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.item-portfolio {
+    flex-basis: calc(100%/3 - 30px);
+
     background: var(--title-text-color)
 }
 
-.list-portfolio .title-portfolio {
+.list-portfolio > .item-portfolio {
+    border: 1px solid #EEEEEE;
+}
+
+.text-portfolio {
+    padding: 24px 20px;
+}
+
+.list-portfolio .title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 }
 
-.list-portfolio .text-portfolio {
+.list-portfolio .text {
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.03em;
@@ -361,11 +397,16 @@ img {
 }
 
 /* Стіль футера */
+
 .footer-contact {
     background: #2F303A;
 }
 
 .logo-footer {
+    display: block;
+    padding-top: 60px;
+    margin-bottom: 20px;
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -378,11 +419,28 @@ img {
     color: var(--accent-color);
 }
 
-.list-footer .item-footer .address-link {
-    color: var(--title-text-color)
+.footer-address {
+    padding-bottom: 60px;
 }
 
-.list-footer .address-link {
+.list-footer {
+    margin: 0;
+    padding: 0;
+}
+
+
+.item-footer:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.item-footer > .map-link {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+}
+
+.address-link {
     font-style: normal;
     font-size: 14px;
     line-height: 1.714;
@@ -390,10 +448,7 @@ img {
     color: rgba(255, 255, 255, 0.6);
 }
 
-.list-footer .address-link:hover {
-       color: var(--accent-color)
-}
-
-.list-footer .address-link:focus {
+.address-link:hover,
+.address-link:focus {
     color: var(--accent-color)
 }
