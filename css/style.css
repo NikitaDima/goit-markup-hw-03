@@ -155,8 +155,6 @@ img {
 
 /* Стилізація героя головного контенту */
 
-
-
 .main-hero {
     background-color: #2F303A;
     padding: 200px 0;
@@ -289,12 +287,6 @@ img {
     flex-wrap: wrap;
     gap: 30px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.187;
-    letter-spacing: 0.03em;
-    text-align: center;
-
     margin: 0;
     padding: 0;
     margin-right: -30px;
@@ -310,16 +302,25 @@ img {
     }
 
 .conteiner-team {
-    margin: 30px auto;
+    text-align: center;
+    padding: 30px 0;
 }
 
 
 .list-team .text-team {
     font-weight: 500;
+    font-size: 16px;
+    line-height: 1.187;
+    letter-spacing: 0.03em;
+
     margin-bottom: 10px;
 }
 
 .list-team .desc-team {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.187;
+    letter-spacing: 0.03em;
     color: var(--desc-text-color)
 }
 
